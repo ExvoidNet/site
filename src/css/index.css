@@ -1,4 +1,6 @@
-/* Font (Global) */
+/*
+  * Fonts
+*/
 @font-face {
 	font-family: "Gotham-Bold";
 	src: url('../font/Gotham-Bold.otf');
@@ -9,111 +11,63 @@
     src: url('../font/Gotham-Thin.otf');
 }
 
-/* Page */
+/*
+  * Primary
+*/
 body {
 	background-image: url('../banner.png');
 	color: white;
-    margin-left: 100px;
-    margin-right: 100px;
+	margin-inline: clamp(10px,50px,100px);
 }
 
-/* Heading */
+/*
+  * Heading
+*/
 h1 {
 	text-align: center;
-	font-size: 50px;
+	font-size: clamp(20px,5vw,50px);
+	white-space: nowrap;
 	font-family: 'Gotham-Bold';
 }
 
-/* Paragraphs */
+/*
+  * Paragraphs
+*/
 p {
 	text-align: center;
 	line-height: 1.3;
-	font-size: 25px;
+	font-size: clamp(16px,2vw,25px);
 	font-family: 'Gotham-Thin';
+
 }
 
-/*Logo @ 34*/
+/*
+  * Logo
+*/
 .logo img {
 	display: block;
 	margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-	margin-bottom: 100px ; 
+  margin-left: auto;
+  margin-right: auto;
+	margin-bottom: clamp(30px,5vh,100px);
+	min-width: 150px;
+	max-width: 200px;
+	max-height: 200px;
 }
 
-/* Footer @ 45 */
+/*
+  * Footer
+*/
 .footer p {
+	margin: none;
+	padding: none;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right:0;
+	white-space: nowrap;
 	font-weight: 900;
-	font-size: 13.5px;
+	font-size: clamp(11px,2.5vw,13.5px);
 	text-transform: uppercase;
-}
 
-/* --- Form --- */
-
-.intro > h1 {
-	margin-left: 10px;
-	margin-bottom: -15px;
-	text-align: left;
-	font-size: 40px;
-	font-family: 'Gotham-Bold';
-}
-
-.intro > h5 {
-	margin-left: 10px;
-	margin-bottom: -15px;
-	text-align: left;
-	font-size: 20px;
-	font-family: 'Gotham-Thin';
-}
-
-.intro > p {
-	margin-top: 35px;
-	margin-left: 10px;
-	text-align: left;
-	line-height: 1.3;
-	font-size: 20px;
-	font-family: 'Gotham-Thin';
-}
-
-/*Logo @ 34*/
-.logo-form img {
-	display: block;
-	margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.criteria > h1 {
-	margin-left: 10px;
-	margin-bottom: -15px;
-	text-align: left;
-	font-size: 40px;
-	font-family: 'Gotham-Bold';
-}
-
-.criteria > h5 {
-	margin-left: 10px;
-	margin-bottom: -15px;
-	text-align: left;
-	font-size: 20px;
-	font-family: 'Gotham-Thin';
-}
-
-.criteria > p {
-	margin-top: 50px;
-	margin-left: 10px;
-	text-align: left;
-	line-height: 1.3;
-	font-size: 20px;
-	font-family: 'Gotham-Thin';
-}
-
-
-
-
-/* Footer @ 45 */
-.footer p {
-	font-weight: 900;
-	font-size: 13.5px;
-	text-transform: uppercase;
 }
