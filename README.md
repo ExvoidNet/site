@@ -16,9 +16,9 @@
 <h3 align="center">Site</h3>
 
   <p align="center">
-    Notre site web officiel.
+    Le site web officiel d'Exvoid Network.
     <br />
-    <i>Our official website.</i>
+    <i>Exvoid Network's official website.</i>
     <br />
     <br />
   </p>
