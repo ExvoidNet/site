@@ -16,6 +16,8 @@
 */
 body {
 	background-image: url('../banner.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 	margin-inline: clamp(10px,50px,100px);
 }
