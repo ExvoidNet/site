@@ -51,7 +51,11 @@ span.eng {
 	position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
 	border-radius: 15px;
-	background-image: url(/src/minecraft.png);
+	background: url("../minecraft.png");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	box-shadow:
 	0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 	0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -90,6 +94,10 @@ span.eng {
 }
 .column-text:after {
 	flex: 50%;
+}
+
+.links {
+	display: flex;
 }
 
 /*
@@ -155,3 +163,32 @@ span.eng {
 
 /*	border-right: 2px solid white;*/
 
+/*
+  * Responsive 
+*/
+@media screen and (max-width: 996px) {
+    .content {
+        flex-direction: column;
+		padding: 20px;
+    }
+	.column-logo {
+		height: 40%;
+	}
+	.column-text {
+		height: 60%;
+		margin-right: 0;
+	}
+	.column-text p {
+		font-size: 2.5vh;
+	}
+	.fa {
+		font-size: 2vh;
+		padding: 14px;
+		height: 2vh;
+		width: 2vh;
+	}
+	.footer p {
+		font-size: 2.2vw;
+		font-weight: normal;
+	}
+}
