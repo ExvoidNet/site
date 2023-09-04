@@ -1,11 +1,19 @@
+:root {
+	--content-padding: 1vh;
+}
+
 /*
   * Body
 */
-body {
-	margin-inline: clamp(10px,50px,100px);
-	background: rgb(255,27,0);
-	background: radial-gradient(circle, rgba(255,27,0,1) 0%, rgba(255,90,0,1) 100%);
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
 	color: white;
+
+	height: 100%;
+	width: 100%;
 }
 h1 {
 	font-family: 'Gotham-Bold';
@@ -37,68 +45,79 @@ span.eng {
 }
 
 /*
-  * Content; Grid box
+  * Webiste content
 */
 .content {
-	display: flex;
-	flex-direction: row;
-	margin-top: 15px;
-	margin-right: 15px;
-	margin-bottom: 15px;
-	margin-left: 15px;
-    align-items: center;
-    justify-content: center;
-	position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-	border-radius: 15px;
+	background: rgb(255,27,0);
+	background: radial-gradient(circle, rgba(255,27,0,1) 0%, rgba(255,90,0,1) 100%);
+
+	padding: var(--content-padding);
+
+	height: calc(100% - 2 * var(--content-padding));
+	width: calc(100% - 2 * var(--content-padding));
+}
+
+.container {
 	background: url("../minecraft.png");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow:
-	0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-	0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-	0 12.5px 10px rgba(0, 0, 0, 0.06),
-	0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-	0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-	0 100px 80px rgba(0, 0, 0, 0.12);
+	border-radius: var(--content-padding);
+
+	height: 100%;
+}
+
+/*
+  * Fillers
+  *
+  * It's used to center the logo and text.
+  * I'm too lazy to come up with something else.
+*/
+.filler-1 {
+	height: 25%;
+}
+.filler-2 {
+	height: 15%;
+}
+
+/*
+  * columns; Grid box
+*/
+.columns {
+	height: 50%;
+	overflow: hidden;
 }
 
 /*
   * Column; Logo 
 */
 .column-logo {
+	float: left;
+	width: 40%;
+	height: 100%;
 	display: flex;
-	flex-grow: 4;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-	margin-right: -100px;
-	margin-left: -100px;
+	justify-content: center;
+	align-items: center;
 }
-.column-logo:after {
-	flex: 50%;
+.column-logo > img {
+	height: auto;
+	width: 55%;
 }
-
 
 /*
   * Column; Paragraph
 */
 .column-text {
-	display: block;
-	flex-grow: 1;
-    justify-content: left;
-    margin-right: 50px;
-}
-.column-text:after {
-	flex: 50%;
-}
+	float: left;
+	width: calc(60% - 36px); /* Include margin */
+	height: 100%;
+	margin-right: 36px;
 
-/*
-  * Uptime
-*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 /*
   * Social Media
@@ -140,42 +159,35 @@ span.eng {
   * Footer
 */
 .footer {
-	display: flex;
-	padding: 0;
-	margin-bottom: 20px;
-	align-items: center;
-    justify-content: center;
-	position: absolute;
-	bottom: 0;
-	left:0;
-	right:0;
+	position: relative;
+
+	height: 10%;
+	width: 100%;
+
+	text-align: center;
 }
 .footer p {
-	white-space: nowrap;
-	font-weight: 900;
-	font-size: clamp(11px,2.5vw,15.5px);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 12px;
 	text-transform: uppercase;
 }
-
-/*	border-right: 2px solid white;*/
 
 /*
   * Responsive 
 */
 @media screen and (max-width: 996px) {
-    .content {
-        flex-direction: column;
-		padding: 20px;
+	.filler-1, .filler-2 {
+		height: 0%;
+	}
+    .columns {
+        height: auto;
     }
-	.column-logo {
-		height: 40%;
-	}
-	.column-text {
-		height: 60%;
-		margin-right: 0;
-	}
-	.column-text p {
-		font-size: 2.5vh;
+	.column-logo, .column-text {
+		float: none;
+		margin: 32px 16px;
+		width: calc(100% - 2 * 16px); /* include margin */
 	}
 	.fa {
 		font-size: 2vh;
@@ -183,8 +195,10 @@ span.eng {
 		height: 2vh;
 		width: 2vh;
 	}
-	.footer p {
+	.footer {
+		margin-top: 4vh;
+	}
+	.footer {
 		font-size: 2.2vw;
-		font-weight: normal;
 	}
 }
