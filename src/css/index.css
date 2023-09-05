@@ -1,10 +1,9 @@
+/*
+  * :: Body :: @Matou0014, ErPiX
+*/
 :root {
 	--content-padding: 1vh;
 }
-
-/*
-  * Body
-*/
 html, body {
 	box-sizing: border-box;
 	margin: 0;
@@ -30,7 +29,7 @@ p {
 }
 
 /*
-  * Fonts
+  * :: Fonts :: @Matou0014
 */
 @font-face {
 	font-family: "Gotham-Bold";
@@ -42,18 +41,15 @@ p {
 }
 
 /*
-  * Webiste content
+  * :: Contents :: @Matou0014, @ErPix
 */
 .content {
 	background: rgb(255,27,0);
 	background: radial-gradient(circle, rgba(255,27,0,1) 0%, rgba(255,90,0,1) 100%);
-
 	padding: var(--content-padding);
-
 	height: calc(100% - 2 * var(--content-padding));
 	width: calc(100% - 2 * var(--content-padding));
 }
-
 .container {
 	background: url("../minecraft.png");
 	background-attachment: fixed;
@@ -61,15 +57,13 @@ p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: var(--content-padding);
-
 	height: 100%;
 }
 
 /*
-  * Fillers
-  *
-  * It's used to center the logo and text.
-  * I'm too lazy to come up with something else.
+  * :: Fillers :: @ErPiX
+   It's used to center the logo and text.
+   I'm too lazy to come up with something else.
 */
 .filler-1 {
 	height: 25%;
@@ -79,16 +73,14 @@ p {
 }
 
 /*
-  * columns; Grid box
+  * :: Columns :: @ErPiX
 */
+/* Grid Box */
 .columns {
 	height: 50%;
 	overflow: hidden;
 }
-
-/*
-  * Column; Logo 
-*/
+/* Logo */
 .column-logo {
 	float: left;
 	width: 40%;
@@ -101,23 +93,19 @@ p {
 	height: auto;
 	width: 55%;
 }
-
-/*
-  * Column; Paragraph
-*/
+/* Paragraphs */
 .column-text {
 	float: left;
 	width: calc(60% - 36px); /* Include margin */
 	height: 100%;
 	margin-right: 36px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 /*
-  * Social Media
+  * :: Buttons :: @Matou0014
 */
 .fa {
 	color: rgb(145, 145, 145);
@@ -153,14 +141,12 @@ p {
   }
 
 /*
-  * Footer
+  * :: Footing Elements :: @Matou0014, @ErPiX
 */
 .footer {
-	position: relative;
-
 	height: 10%;
 	width: 100%;
-
+	position: relative;
 	text-align: center;
 }
 .footer p {
@@ -172,7 +158,7 @@ p {
 }
 
 /*
-  * Responsive 
+  * :: Responsiveness :: @ErPix
 */
 @media screen and (max-width: 996px) {
 	.filler-1, .filler-2 {
