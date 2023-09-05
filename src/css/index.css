@@ -28,9 +28,6 @@ p {
 	font-family: 'Gotham-Thin';
 	font-size: clamp(20px,2vw,30px);
 }
-span.eng {
-	font-weight: 500;
-}
 
 /*
   * Fonts
