@@ -1,0 +1,202 @@
+/*
+  * :: Body :: @Matou0014, @ErPiX
+*/
+:root {
+	--content-padding: 1vh;
+}
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	color: white;
+
+	height: 100%;
+	width: 100%;
+}
+h1 {
+	font-family: 'Gotham-Bold';
+	font-size: clamp(20px,5vw,50px);
+}
+h3 {
+	font-family: 'Gotham-Bold';
+	font-size: clamp(20px,5vw,50px);
+}
+p {
+	font-weight: 900;
+	font-family: 'Gotham-Thin';
+	font-size: clamp(20px,2vw,30px);
+}
+button {
+	font-family: 'Gotham-Bold';
+	font-size: clamp(20px,5vw,50px);
+}
+
+/*
+  * :: Fonts :: @Matou0014
+*/
+@font-face {
+	font-family: "Gotham-Bold";
+	src: url('../font/Gotham-Bold.otf');
+}	
+@font-face {
+	font-family: "Gotham-Thin";
+    src: url('../font/Gotham-Thin.otf');
+}
+
+/*
+  * :: Contents :: @Matou0014, @ErPix
+*/
+.content {
+	background: rgb(255,27,0);
+	background: radial-gradient(circle, rgba(255,27,0,1) 0%, rgba(255,90,0,1) 100%);
+	padding: var(--content-padding);
+	height: calc(100% - 2 * var(--content-padding));
+	width: calc(100% - 2 * var(--content-padding));
+}
+.container {
+	background: url("../minecraft.png");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: var(--content-padding);
+	height: 100%;
+}
+
+/*
+  * :: Fillers :: @ErPiX
+   It's used to center the logo and text.
+   I'm too lazy to come up with something else.
+*/
+.filler-1 {
+	height: 25%;
+}
+.filler-2 {
+	height: 15%;
+}
+
+/*
+  * :: Columns :: @ErPiX
+*/
+/* Grid Box */
+.columns {
+	height: 50%;
+	overflow: hidden;
+}
+/* Logo */
+.column-logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.column-logo > img {
+	height: auto;
+	width: 55%;
+}
+/* Paragraphs */
+.column-text {
+	float: left;
+	width: calc(60% - 36px); /* Include margin */
+	height: 100%;
+	margin-right: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*
+  * :: Buttons :: @Matou0014
+*/
+.button {
+	background: none;
+ 	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 15px 35px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+  
+  .button:hover {
+	background-image: linear-gradient(to right, #ff1b00, #ff3200, #ff4200, #ff4f00, #ff5a00);
+  }
+
+  /* Uptime */
+  .fa-wrench {
+	text-decoration: none;
+  	color: white;
+  } 
+
+  /* Feedbacky */
+  .fa-comment {
+	text-decoration: none;
+	color: white;
+  }
+ 
+   /* Speedtest */
+   .fa-note-sticky{
+	text-decoration: none;
+	color: white;
+  } 
+
+  /* Hastebin */
+  .fa-note-sticky{
+	text-decoration: none;
+	color: white;
+  }
+
+
+
+/*
+  * :: Footing Elements :: @Matou0014, @ErPiX
+*/
+.footer {
+	height: 10%;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.footer p {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+/*
+  * :: Responsiveness :: @ErPix
+*/
+@media screen and (max-width: 996px) {
+	.filler-1, .filler-2 {
+		height: 0%;
+	}
+    .columns {
+        height: auto;
+    }
+	.column-logo, .column-text {
+		float: none;
+		margin: 32px 16px;
+		width: calc(100% - 2 * 16px); /* include margin */
+	}
+	.fa {
+		font-size: 2vh;
+		padding: 14px;
+		height: 2vh;
+		width: 2vh;
+	}
+	.footer {
+		margin-top: 4vh;
+	}
+	.footer {
+		font-size: 2.2vw;
+	}
+}
