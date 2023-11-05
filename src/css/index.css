@@ -1,3 +1,7 @@
+/*
+  * ::: Root ::: 
+  * @erpixxx
+*/
 :root {
 	--white: rgb(232, 232, 232);
 	--black: rgb(20, 20, 20);
@@ -7,7 +11,8 @@
 }
 
 /*
-  * :: Body :: @Matou0014, ErPiX
+  * ::: Body ::: 
+  * @Matou0014, @erpixxx
 */
 html,
 body {
@@ -28,7 +33,8 @@ h6 {
 }
 
 /*
-  * :: Fonts :: @Matou0014
+  * ::: Fonts ::: 
+  * "We agreed on using this font back with our old logo before Grégoire made us the Minecraft-ish one, we might have to also change the font later. @Matou0014"
 */
 @font-face {
 	font-family: "Gotham-Bold";
@@ -40,7 +46,8 @@ h6 {
 }
 
 /*
-  * :: Contents :: @Matou0014, @ErPix
+  * ::: Contents ::: 
+  * @Matou0014, @erpixxx
 */
 .page {
 	background: var(--exvoid-red);
@@ -59,7 +66,6 @@ h6 {
 	height: 100%;
 	width: 100%;
 }
-
 .curtain {
 	position: fixed;
 	height: 100%;
@@ -82,10 +88,11 @@ h6 {
 	animation-duration: 1.5s;
 }
 
-/**
- * :: Container ::
- * We use it to add horizontal padding to all inner elements.
- */
+
+/*
+  * ::: Container :::
+  * "We use it to add horizontal padding to all inner elements. @erpixx"
+*/
 .container {
 	height: 100%;
 	width: 100%;
@@ -93,10 +100,10 @@ h6 {
 }
 
 /*
-  * :: Logo ::
+  * ::: Logo :::
+  * @Matou0014, @erpixx
 */
 .logo {
-	/* position: relative; */
 	display: flex;
 	justify-content: center;
 	padding: 25px 0;
@@ -104,8 +111,8 @@ h6 {
 	width: 100%;
 }
 .logo__img {
-	/* position: absolute; */
-	height: 125px;
+	height: 175px;
+	max-height: 100%;
 	width: 100%;
 	object-fit: contain;
 
@@ -113,12 +120,13 @@ h6 {
 }
 
 /*
-  * :: Header ::
+  * ::: Header :::
+  * @erpixxx
 */
 .header {
 	align-items: center;
 	display: flex;
-	height: 10%;
+	height: 15%;
 	width: 100%;
 	justify-content: center;
 
@@ -127,9 +135,13 @@ h6 {
 	animation-delay: 2.2s, 2.2s;
 }
 
+/*
+  * ::: Texts :::
+  * @erpixxx
+*/
 .texts {
 	border-radius: 50px;
-	padding: 30px 0;
+	padding: 5px 0;
 	height: 35%;
 	width: 100%;
 
@@ -140,9 +152,10 @@ h6 {
 	align-items: center;
 	float: left;
 	display: flex;
-	font-size: 120%;
+	flex-direction: column;
+	font-size: 130%;
 	justify-content: center;
-	padding: 20px;
+	padding: 0 20px;
     text-align: center;
 	height: 100%;
 	width: 50%;
@@ -150,27 +163,39 @@ h6 {
 .text__fr {
 	box-shadow: 2px 0px 0px 0px var(--white);
 }
+.text__flag {
+	font-size: 150%;
+}
 
+/*	
+  * ::: Services :::
+  * @erpixxx, @Matou0014
+*/
 .services {
+	float: left;
 	text-align: center;
 	height: 20%;
+	width: 100%;
 
 	animation: fadeIn 2s;
 	animation-delay: 2.2s;
+}
+.services__text {
+	padding: 15px 0;
+	font-weight: 900;
 }
 .services__links {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	padding: 20px 0px;
 }
 .service {
 	background-color: rgba(0, 0, 0, 0.15);
-	border: 2px solid red;
+	/*border: 2px solid red;* "I think the buttons looks better without any border. @Matou0014" */ 
 	border-radius: 12px;
 	color: var(--white);
 	font-size: 80%;
-	margin: 0 20px;
+	margin-bottom: 20px;
 	padding: 20px 12px;
 	text-align: center;
 	text-decoration: none;
@@ -190,20 +215,27 @@ h6 {
 	font-family: "Gotham-Bold";
 }
 
+/*
+  * ::: Footer :::
+  * @Matou0014 @erpixxx
+*/
 .footer {
+	clear: both;
 	font-size: 55%;
 	display: flex;
 	flex-direction: column;
-	height: 15%;
+	height: 10%;
 	justify-content: flex-end;
 	align-items: center;
 }
 .footer__text {
-	margin: 8px 0;
+	margin: 1px 0;
 }
 
-
-
+/*
+  * ::: Mobile Compatibility :::
+  * @erpixxx
+*/
 @media screen and (max-width: 1048px) {
 	.container {
 		padding: 0;
@@ -244,7 +276,7 @@ h6 {
 	.services__links {
 		float: left;
 		flex-direction: column;
-		margin: 30px 0;
+		margin-bottom: 30px;
 		height: auto;
 		width: 100%;
 	}
@@ -263,6 +295,10 @@ h6 {
 	}
 }
 
+/*
+  * ::: Animations :::
+  * @erpixxx
+*/
 @keyframes blackCurtainSlide {
 	from {
 		bottom: 0;
@@ -271,7 +307,6 @@ h6 {
 		bottom: 100%;
 	}
 }
-
 @keyframes gradientCurtainSlide {
 	from {
 		bottom: 0;
@@ -280,7 +315,6 @@ h6 {
 		bottom: 100%;
 	}
 }
-
 @keyframes logoDashIn {
 	0% {
 		margin: -70px 0;
@@ -295,16 +329,6 @@ h6 {
 		padding: 0;
 	}
 }
-
-/* @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-} */
-
 @keyframes rotate {
 	0% {
 		rotate: 0deg;
