@@ -22,51 +22,85 @@ The official website of Exvoid Network! This is a placeholder that will be repla
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/css/index.css">
-	<script src="https://kit.fontawesome.com/f91e3e8d29.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="image/png" href="src/favicon.png"/>
-	<!-- Open Graph -->
 	<meta property="og:title" content="Exvoid Network" />
 	<meta property="og:description" content="Site web officiel d'Exvoid Network / Official Exvoid Network website." />
 	<meta property="og:url" content="https://exvoid.net/" />
 	<meta property="og:image" content="src/promo.png" />
 	<meta property="og:color" content="#FF0C00" />
-	<!-- Title -->
+	<!-- Dependencies -->
+    	<link rel="stylesheet" href="src/css/normalize.css">
+    	<link rel="stylesheet" href="src/css/cssreset.css">
+    	<link rel="stylesheet" href="src/css/index.css">
+   	 	<link rel="shortcut icon" type="image/png" href="src/favicon.png"/>	
+		<script src="https://kit.fontawesome.com/f91e3e8d29.js" crossorigin="anonymous"></script>
     <title>Exvoid Network</title>
 </head>
 <body>
-
-	<!-- Content -->
-	<div class="content">
-		<div class="container">
-			<div class="filler-1"></div>
-			<div class="columns">
-				<div class="column-logo">
-					<img src="src/logo.png" alt="Exvoid Network">
+	<!-- Curtain effect -->
+	<div class="curtain curtain-gradient"></div>
+	<div class="curtain curtain-black"></div>
+	<!-- Presentation -->
+	<div class="page">
+		<div class="bg-image">
+			<div class="container">
+				<!-- Exvoid Network logo-->
+				<div class="logo">
+					<img class="logo__img" src="src/logo.png" alt="Exvoid Network">
 				</div>
-				<div class="column-text">
-					<div>
-						<h1>Hey 👋,</h1>
-						<p>Merci beaucoup de ton intérêt à nos projets, notre équipe est présentement occuper avec le travaille et l'école. Repasse bientôt!</p> 
+				<!-- Primary content -->
+				<div class="header">
+					<h1 class="header__content">Hey 👋,</h1>
+				</div>
+				<div class="texts">
+					<!-- French texts -->
+					<div class="text text__fr">
+						<h2>🇫🇷</h2>
+						<p>Merci beaucoup de ton intérêt à nos projets, notre équipe est présentement occuper avec le travaille et l'école. Repasse bientôt!</p>
+					</div>
+					<!-- English texts -->
+					<div class="text text__en">
+						<h2>🇺🇸</h2>
 						<p>Thank you so much for your interests in our projects, currently our team is occupied with work and school. Come back soon!</p>
-						<!-- 
-							Button class, links not working for style see CSS @ 112
-							- @Matou0014
-						-->
-							<button class="button button1"><a href="https://uptime.exvoid.net" target="_blank" title="Uptime" class="fa fa-wrench"></a> Uptime</button>
-							<button class="button button2"><a href="https://feedback.exvoid.net/b/project" target="_blank" title="Feedback" class="fa fa-comment"></a> Feedback</button>
-							<button class="button button3"><a href="https://speedtest.exvoid.net" target="_blank" title="Speedtest" class="fa fa-comment"></a> Speedtest</button>
-							<button class="button button4"><a href="https://hastebin.exvoid.net" target="_blank" title="Hastebin" class="fa fa-comment"></a> Hastebin</button>
-						</div>
 					</div>
 				</div>
-			</div>
-			<div class="filler-2"></div>
-			<div class="footer">
-				<p>2023 © Tous droit réserver // All rights reserved</p>
+				<!-- 
+					Buttons
+					"We have chosen to name it this way to keep it organised and is a good convention if we had multiple pages later on. @Matou0014"
+				 -->
+				<div class="services">
+					<p class="services__text">Liens / Links</p>
+					<div class="services__links">
+						<!-- Uptime -->
+						<a href="https://uptime.exvoid.net/" class="service" target="_blank">
+							<span class="service__icon fa fa-wrench"></span>
+							<span class="service__label">Uptime</span>
+						</a>
+						<!-- Feedbacky -->
+						<a href="https://feedback.exvoid.net/" class="service" target="_blank">
+							<span class="service__icon fa fa-comment"></span>
+							<span class="service__label">Feedback</span>
+						</a>
+						<!-- Speedtest -->
+						<a href="https://speedtest.exvoid.net/" class="service" target="_blank">
+							<span class="service__icon fa fa-gauge"></span>
+							<span class="service__label">Speedtest</span>
+						</a>
+						<!-- Hastebin -->
+						<a href="https://hastebin.exvoid.net/" class="service" target="_blank">
+							<span class="service__icon fa fa-note-sticky"></span>
+							<span class="service__label">Hastebin</span>
+						</a>
+					</div>
+				</div>
+				<!-- Footer -->
+				<footer class="footer">
+					<!--
+						"Change that the copyfooter is lowercase but shown as caps w/ css. @Matou0014"
+					-->
+					<span class="footer__text">2023 © TOUS DROIT RÉSERVER // ALL RIGHTS RESERVED</span>
+				</footer>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
