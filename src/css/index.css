@@ -195,8 +195,8 @@ h6 {
 	border-radius: 12px;
 	color: var(--white);
 	font-size: 80%;
-	margin-bottom: 20px;
 	padding: 20px 12px;
+	margin: 0 10px 20px 10px;
 	text-align: center;
 	text-decoration: none;
 	width: 200px;
