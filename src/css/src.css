@@ -1,0 +1,46 @@
+/*
+  * ::: Root ::: 
+  * @erpixxx
+*/
+:root {
+	--white: rgb(232, 232, 232);
+	--black: rgb(20, 20, 20);
+	--exvoid-red: rgb(255, 27, 0);
+	--exvoid-orange: rgb(255, 90, 0);
+	--page-border: 1vh;
+}
+
+/*
+  * ::: Body ::: 
+  * @Matou0014, @erpixxx
+*/
+html,
+body {
+	color: var(--white);
+	font-family: 'Gotham-Thin';
+	font-size: 125%;
+	height: 100%;
+	width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Gotham-Bold';
+}
+
+/*
+  * ::: Fonts ::: 
+  * "We agreed on using this font back with our old logo before Grégoire made us the Minecraft-ish one, we might have to also change the font later. @Matou0014"
+*/
+@font-face {
+	font-family: "Gotham-Bold";
+	src: url('../font/Gotham-Bold.otf');
+}	
+@font-face {
+	font-family: "Gotham-Thin";
+    src: url('../font/Gotham-Thin.otf');
+}
